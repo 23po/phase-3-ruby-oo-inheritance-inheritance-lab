@@ -4,6 +4,14 @@ require_relative "../lib/user"
 require_relative "../lib/teacher"
 require_relative "../lib/student"
 
+jim = User.new
+jim.first_name = "jim"
+jim.last_name = "burrow"
+
+kevin = Student.new
+kevin.first_name = "Kevin"
+kevin.last_name = "Spacey"
+
 steve = Student.new
 steve.first_name = "Steve"
 steve.last_name = "Jobs"
@@ -14,7 +22,13 @@ avi.last_name = "Flombaum"
 
 
 some_knowledge = avi.teach 
-
 steve.learn(some_knowledge)
+
+some_knowledge = avi.teach
+steve.learn(some_knowledge)
+
+some_knowledge = avi.teach
+kevin.learn(some_knowledge)
+#jim.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
